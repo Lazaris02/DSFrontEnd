@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DsApp</string>
+    <string name="send_files">Send gpx </string>
+    <string name="show_stats">Show statistics</string>
+</resources>
