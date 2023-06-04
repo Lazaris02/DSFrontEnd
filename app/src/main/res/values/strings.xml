@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">DsApp</string>
-    <string name="send_files">Send gpx </string>
-    <string name="show_stats">Show statistics</string>
+    <string name="send_files">Share my Route </string>
+    <string name="show_stats">Show Statistics</string>
+    <string name="choose_file">Choose File</string>
+    <string name="gpx_hint">select gpx file</string>
+    <string name="send_to_server">Send my gpx</string>
+    <string name="send_hint">Click to Calculate your progress</string>
 </resources>
