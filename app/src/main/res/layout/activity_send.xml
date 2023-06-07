@@ -55,5 +55,15 @@
         android:textColor="@color/white"
         />
 
+    <Button
+        android:id="@+id/show_statistics"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="@string/show_stats"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

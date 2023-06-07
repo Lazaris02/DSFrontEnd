@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo"
+        android:contentDescription="Our logo" />
 
     <TextView
         android:layout_width="match_parent"
@@ -22,6 +23,42 @@
         android:textAlignment="center"
         android:text="@string/show_stats"
         />
+
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="@string/show_current_gpx"
+        />
+
+    <TextView
+        android:id="@+id/avg"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="@string/show_my_avg"
+        />
+
+    <TextView
+        android:id="@+id/t_avg"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="@string/show_total_avg"
+        />
+
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
