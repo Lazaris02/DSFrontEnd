@@ -6,4 +6,7 @@
     <string name="gpx_hint">select gpx file</string>
     <string name="send_to_server">Send my gpx</string>
     <string name="send_hint">Click to Calculate your progress</string>
+    <string name="show_current_gpx">Current gpx</string>
+    <string name="show_my_avg">Your Average</string>
+    <string name="show_total_avg">Total Average</string>
 </resources>
