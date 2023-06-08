@@ -9,4 +9,5 @@
     <string name="show_current_gpx">Current gpx</string>
     <string name="show_my_avg">Your Average</string>
     <string name="show_total_avg">Total Average</string>
+    <string name="request_storage">Storage Permission</string>
 </resources>

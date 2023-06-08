@@ -1,21 +1,19 @@
 package com.example.dsapp;
 
-import static android.content.ContentValues.TAG;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
+
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
-import java.util.Arrays;
 
 public class StatsActivity extends AppCompatActivity {
 
@@ -44,9 +42,23 @@ public class StatsActivity extends AppCompatActivity {
         handler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
             @Override
             public boolean handleMessage(@NonNull Message message) {
-                /*gets the result from the message , changes the ui or sth*/
+                /*gets the result from the message , changes the UI*/
+                String get_curr_text = curr.getText().toString();
+                String curr_append = message.getData().getString("curr");
+                get_curr_text = get_curr_text+"\n"+curr_append;
 
-                /*sets text in the activity*/
+                String get_my_avg_text = my_avg.getText().toString();
+                String my_avg_append = message.getData().getString("my_avg");
+                get_my_avg_text = get_my_avg_text+"\n"+my_avg_append;
+
+                String get_t_avg_text = t_avg.getText().toString();
+                String t_avg_append = message.getData().getString("t_avg");
+                get_t_avg_text =get_t_avg_text+"\n"+t_avg_append;
+
+                /*update the text*/
+                curr.setText(get_curr_text);
+                my_avg.setText(get_my_avg_text);
+                t_avg.setText(get_t_avg_text);
 
                 return true;
             }
@@ -57,11 +69,9 @@ public class StatsActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-
-        Log.e(TAG, Arrays.toString(current_gpx) );
-        Log.e(TAG, Arrays.toString(my_average) );
-        Log.e(TAG, Arrays.toString(total_average) );
-
+        StatsThread statsThread = new StatsThread(current_gpx.clone(),my_average.clone(),total_average.clone(),handler);
+        statsThread.start();
+        /*todo might need to */
         /*take the stats and change the look of the UI*/
     }
 }

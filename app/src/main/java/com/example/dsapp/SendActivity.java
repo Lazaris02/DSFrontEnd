@@ -114,7 +114,7 @@ public class SendActivity extends AppCompatActivity {
                                 Log.e(TAG, Arrays.toString(gpx_file.toArray()));
 
                                 /*write in the socket*/
-                                oos.writeObject(new ArrayList<>(gpx_file));
+                                oos.writeObject(gpx_file); /*sends an arraylist*/
                                 oos.flush();
 
                                 //gpx_file.clear();
