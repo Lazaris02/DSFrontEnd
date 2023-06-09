@@ -18,6 +18,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -50,9 +51,7 @@ public class SendActivity extends AppCompatActivity {
     Double[] total_avg;
     Double[] individual_avg;
 
-
-
-
+    Toast gpx_back_toast;
     private static final int PICK_GPX_FILE = 2;
 
     @Override
@@ -65,6 +64,8 @@ public class SendActivity extends AppCompatActivity {
         send = (Button) findViewById(R.id.send_to_server);
 
         show_statistics = (Button) findViewById(R.id.show_statistics);
+
+        gpx_back_toast = Toast.makeText(this,"Results Calculated",Toast.LENGTH_SHORT);
 
         handler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
             @Override
@@ -117,12 +118,15 @@ public class SendActivity extends AppCompatActivity {
                                 oos.writeObject(gpx_file); /*sends an arraylist*/
                                 oos.flush();
 
-                                //gpx_file.clear();
+
 
                                 /*wait for the results from Master*/
                                 personal_results = (String[]) ois.readObject();
                                 total_avg = (Double[]) ois.readObject();
                                 individual_avg = (Double[]) ois.readObject();
+
+                                gpx_back_toast.show();
+
 
                             }catch (IOException exc){exc.printStackTrace();} catch (
                                     ClassNotFoundException e) {
@@ -133,7 +137,9 @@ public class SendActivity extends AppCompatActivity {
                         }
 
                         @Override
-                        protected void onPostExecute(String s){}
+                        protected void onPostExecute(String s){
+
+                        }
 
                     };
                     myAsync.execute(); /*this starts a thread*/
