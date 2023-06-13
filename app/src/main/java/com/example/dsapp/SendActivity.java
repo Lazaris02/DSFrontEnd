@@ -104,7 +104,7 @@ public class SendActivity extends AppCompatActivity {
                         @Override
                         protected String doInBackground(Void... voids) {
 
-                            String host_ip = "10.0.2.2";
+                            String host_ip = "192.168.2.9";
                             int port_num = 5377;
 
                             try {
@@ -216,5 +216,11 @@ public class SendActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
     }
 }

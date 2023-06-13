@@ -74,4 +74,10 @@ public class StatsActivity extends AppCompatActivity {
         /*todo might need to */
         /*take the stats and change the look of the UI*/
     }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+    }
 }

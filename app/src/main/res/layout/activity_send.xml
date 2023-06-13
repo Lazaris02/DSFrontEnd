@@ -10,19 +10,12 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="80dp"
         android:src="@drawable/logo"/>
 
-    <EditText
-        android:id="@+id/gpx_hint"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:textColorHint="#d3d3d3"
-        android:hint="@string/gpx_hint"
-        />
+
 
     <Button
         android:id="@+id/choose_gpx"
@@ -33,16 +26,9 @@
         android:textAlignment="center"
         android:text="@string/choose_file"
         android:textColor="@color/white"
+        android:layout_marginBottom="40dp"
         />
-    <EditText
-        android:id="@+id/send_hint"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:textColorHint="#d3d3d3"
-        android:hint="@string/send_hint"
-        />
+
 
     <Button
         android:id="@+id/send_to_server"
@@ -53,6 +39,7 @@
         android:textAlignment="center"
         android:text="@string/send_to_server"
         android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
         />
 
     <Button
